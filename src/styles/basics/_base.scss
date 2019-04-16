@@ -35,6 +35,11 @@ html {
     padding-right: $grid-gutter-width;
   }
 
+  .blogWrapper{
+    max-width: 760px;
+    margin: auto;
+  }
+
   // Scroll to top button
   .scroll-to-top {
     position: fixed;
