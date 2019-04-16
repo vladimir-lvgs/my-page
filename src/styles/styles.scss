@@ -1,0 +1,28 @@
+@import "./setup/variables";
+
+// Import Bootstrap
+@import "../vendor/bootstrap/scss/bootstrap";
+
+// Import Custom SB Admin 2 Mixins and Components
+@import "./setup/mixins";
+@import "./basics/base";
+@import "./utilities/animation";
+@import "./utilities/background";
+@import "./utilities/display";
+@import "./utilities/text";
+@import "./utilities/border";
+@import "./utilities/progress";
+@import "./utilities/rotate";
+
+// Custom Components
+@import "./basics/dropdowns.scss";
+@import "./components/global";
+@import "./components/topbar";
+@import "./components/sidebar";
+@import "./basics/buttons.scss";
+
+@import "./basics/cards";
+// @import "charts.scss";
+// @import "login.scss";
+@import "./basics/error";
+@import "./basics/footer";

@@ -1,29 +1,50 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app" class="wrapper">
+        <SideBar/>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <Header/>
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+                    <!-- Main Content -->
+                    <div id="content">
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+                            <router-view/>
+                        </div>
+                        <!-- /.container-fluid -->
+                    </div>
+                    <!-- End of Main Content -->
+                </div>
+                <!-- End of Content Wrapper -->
+            </div>
+            <!-- End of Main Content -->
+            <ToTopButton/>
+        </div>
+        <!-- End of Content Wrapper -->
     </div>
-    <router-view />
-  </div>
 </template>
+<script>
+import SideBar from "./components/SideBar";
+import Header from "./components/Header";
+import ToTopButton from "./components/ToTopButton";
+
+export default {
+    components: {
+        SideBar,
+        Header,
+        ToTopButton
+    },
+    data() {
+        return {};
+    },
+    methods: {
+    }
+};
+</script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "./styles/styles.scss";
 </style>
